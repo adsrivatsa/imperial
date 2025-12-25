@@ -28,11 +28,12 @@ export const anonymousAuth = async (): Promise<any> => {
     const token = localStorage.getItem("auth");
     if (isBrowser && token) {
         const options = {
+            credentials: "include",
             method: "GET",
             headers: {
                 Authorization: token,
             },
-        };
+        } as const;
 
         servers = await getServers();
         res = await fetch(`${servers[0]}/verify`, options);

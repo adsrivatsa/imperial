@@ -60,11 +60,12 @@ export const signInAndRegister = async (
 
     if (anonToken) {
         const options = {
+            credentials: "include",
             method: "GET",
             headers: {
                 Authorization: anonToken,
             },
-        };
+        } as const;
 
         res = await fetch(`${servers[0]}/verify`, options);
         if (res.status === 200) {
