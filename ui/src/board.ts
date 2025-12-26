@@ -518,7 +518,7 @@ export function renderEdgePlacement(ep: IEdgePlacement, removed = false) {
     roadContainer.addChild(roadSprite);
 
     container.addChild(roadContainer);
-    roadContainer.scale.set(25 / roadSprite.texture.width);
+    roadContainer.scale.set(15 / roadSprite.texture.width);
 
     if (isInitComplete) {
         anim.requestTranslationAnimation([roadContainer], 4);
