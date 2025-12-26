@@ -861,7 +861,7 @@ export async function setRobberTile(tile: UITile) {
         board.robber = new PIXI.Sprite();
         assets.assignTexture(board.robber, assets.robber);
         board.robber.zIndex = 1100;
-        board.robber.scale.set(70 / board.robber.width);
+        board.robber.scale.set(50 / board.robber.width);
         board.robber.anchor.x = 0.8;
         board.robber.anchor.y = 1;
         container.addChild(board.robber);

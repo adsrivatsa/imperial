@@ -250,7 +250,7 @@ export const metropolis: { [key: number]: StaticImageData } = {
 import wallS from "../public/assets/city/w.png";
 export const wall = wallS;
 
-import robberS from "../public/assets/robber.png";
+import robberS from "../public/assets/robber.svg";
 export const robber = robberS;
 
 import bankS from "../public/assets/bank.png";
@@ -265,7 +265,7 @@ export const bot = botS;
 import spectateS from "../public/assets/spectate.png";
 export const spectate = spectateS;
 
-import seaS from "../public/assets/sea.jpg";
+import seaS from "../public/assets/sea.svg";
 export const sea = seaS;
 
 import barbarianTrackS from "../public/assets/barbarian/track.png";
