@@ -7,7 +7,7 @@ import tileTex2 from "../public/assets/tile-tex/2.png";
 import tileTex3 from "../public/assets/tile-tex/3.png";
 import tileTex4 from "../public/assets/tile-tex/4.png";
 import tileTex5 from "../public/assets/tile-tex/5.png";
-import tileTex21 from "../public/assets/tile-tex/21.jpg";
+import tileTex21 from "../public/assets/tile-tex/21.png";
 import tileTexFog from "../public/assets/tile-tex/fog.jpg";
 
 import port1 from "../public/assets/ports/1.png";
