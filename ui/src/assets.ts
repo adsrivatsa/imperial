@@ -165,9 +165,9 @@ export const city: { [key: string]: StaticImageData } = {
 
 /******************** Knight *******************************************/
 
-import knight1Red from "../public/assets/knight/1-red.png";
-import knight1Blue from "../public/assets/knight/1-blue.png";
-import knight1Green from "../public/assets/knight/1-green.png";
+import knight1Red from "../public/assets/knight/1-red.svg";
+import knight1Blue from "../public/assets/knight/1-blue.svg";
+import knight1Green from "../public/assets/knight/1-green.svg";
 import knight1Yellow from "../public/assets/knight/1-yellow.png";
 import knight1Plum from "../public/assets/knight/1-plum.png";
 import knight1Cyan from "../public/assets/knight/1-cyan.png";
@@ -184,7 +184,7 @@ import knight3Yellow from "../public/assets/knight/3-yellow.png";
 import knight3Plum from "../public/assets/knight/3-plum.png";
 import knight3Cyan from "../public/assets/knight/3-cyan.png";
 
-import knightDisabledS from "../public/assets/knight/disabled.png";
+import knightDisabledS from "../public/assets/knight/disabled.svg";
 export const knightDisabled = knightDisabledS;
 
 export const knight: { [level: number]: { [color: string]: StaticImageData } } =
@@ -349,20 +349,20 @@ export const ports: { [key: number]: StaticImageData } = {
 
 import btnYes from "../public/assets/buttons/yes.png";
 import btnNo from "../public/assets/buttons/no.png";
-import btnSettlement from "../public/assets/buttons/settlement.png";
-import btnCity from "../public/assets/buttons/city.png";
-import btnRoad from "../public/assets/buttons/road.png";
+import btnSettlement from "../public/assets/buttons/settlement.svg";
+import btnCity from "../public/assets/buttons/city.svg";
+import btnRoad from "../public/assets/buttons/road.svg";
 import btnDevelopmentCard from "../public/assets/buttons/dcard.png";
-import btnKnightBox from "../public/assets/buttons/knight.png";
-import btnKnightBuild from "../public/assets/buttons/knight_build.png";
+import btnKnightBox from "../public/assets/buttons/knight.svg";
+import btnKnightBuild from "../public/assets/buttons/knight_build.svg";
 import btnKnightActivate from "../public/assets/buttons/knight_activate.png";
 import btnKnightRobber from "../public/assets/buttons/knight_robber.png";
-import btnKnightMove from "../public/assets/buttons/knight_move.png";
+import btnKnightMove from "../public/assets/buttons/knight_move.svg";
 import btnCityImprove from "../public/assets/buttons/improve.png";
 import btnCityImprovePaper from "../public/assets/buttons/improve_paper.svg";
 import btnCityImproveCloth from "../public/assets/buttons/improve_cloth.svg";
 import btnCityImproveCoin from "../public/assets/buttons/improve_coin.svg";
-import btnWall from "../public/assets/buttons/w.png";
+import btnWall from "../public/assets/buttons/w.svg";
 import btnEndTurn from "../public/assets/buttons/endturn.png";
 import btnSpecialBuild from "../public/assets/buttons/specialbuild.png";
 import btnEdit from "../public/assets/buttons/edit.png";
@@ -394,9 +394,9 @@ export const buttons: { [key in ButtonType]: StaticImageData } = {
 };
 
 // Button backgrounds
-import buttonsBgRed from "../public/assets/buttons/bg/red.jpg";
-import buttonsBgBlue from "../public/assets/buttons/bg/blue.jpg";
-import buttonsBgGreen from "../public/assets/buttons/bg/green.jpg";
+import buttonsBgRed from "../public/assets/buttons/bg/red.svg";
+import buttonsBgBlue from "../public/assets/buttons/bg/blue.svg";
+import buttonsBgGreen from "../public/assets/buttons/bg/green.svg";
 import buttonsBgYellow from "../public/assets/buttons/bg/yellow.jpg";
 import buttonsBgPlum from "../public/assets/buttons/bg/plum.jpg";
 import buttonsBgCyan from "../public/assets/buttons/bg/cyan.jpg";
