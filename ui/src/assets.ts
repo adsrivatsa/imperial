@@ -148,8 +148,8 @@ export const house: { [key: string]: StaticImageData } = {
 /******************** City *******************************************/
 
 import cityRed from "../public/assets/city/city-red.svg";
-import cityBlue from "../public/assets/city/city-blue.png";
-import cityGreen from "../public/assets/city/city-green.png";
+import cityBlue from "../public/assets/city/city-blue.svg";
+import cityGreen from "../public/assets/city/city-green.svg";
 import cityYellow from "../public/assets/city/city-yellow.png";
 import cityPlum from "../public/assets/city/city-plum.png";
 import cityCyan from "../public/assets/city/city-cyan.png";

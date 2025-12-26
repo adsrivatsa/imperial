@@ -416,7 +416,7 @@ export function renderVertexPlacement(vp: IVertexPlacement, removed = false) {
 
         case VertexPlacementType.City:
             assets.assignTexture(sprite, assets.city[urlColor]);
-            sprite.scale.set(70 / sprite.width);
+            sprite.scale.set(50 / sprite.width);
 
             if (vp.Wall) {
                 const wallSprite = new PIXI.Sprite();
