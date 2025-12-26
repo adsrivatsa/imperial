@@ -722,9 +722,10 @@ export function renderClickHighlights() {
     const h = Math.max(...Object.values(DispCoordMap).map((c) => c.Y));
     const w = Math.max(...Object.values(DispCoordMap).map((c) => c.X));
     const ss = canvas.getScaled({ X: w, Y: h });
+    const currentRes = canvas.app.renderer.resolution;
     container.resize(
-        canvas.app.view.width / 1.25,
-        canvas.app.view.height / 1.25,
+        canvas.app.view.width / currentRes,
+        canvas.app.view.height / currentRes,
         ss.x + 120,
         ss.y + 120,
     );

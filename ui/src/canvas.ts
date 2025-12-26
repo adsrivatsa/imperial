@@ -47,7 +47,7 @@ export async function initialize(div: HTMLDivElement, done?: () => void) {
         height: 800,
         antialias: true,
         autoDensity: true,
-        resolution: 1.25,
+        resolution: 4,
         sharedTicker: false,
         autoStart: false,
         clearBeforeRender: false,
