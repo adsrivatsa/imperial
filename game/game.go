@@ -64,6 +64,12 @@ type (
 
 		DiceStats *entities.DiceStats
 
+		// Weighted dice – each die tracks per-face roll counts and uses
+		// exponential weighting to keep the distribution fair over time.
+		RedDie   *entities.WeightedDie
+		WhiteDie *entities.WeightedDie
+		EventDie *entities.WeightedDie
+
 		mutex       sync.Mutex
 		ActionMutex sync.Mutex
 	}
@@ -178,6 +184,9 @@ func (game *Game) Initialize(id string, numPlayers uint16) (*Game, error) {
 	game.InitGraph()
 	game.InitWithGameMode()
 	game.DiceStats = &entities.DiceStats{}
+	game.RedDie = entities.NewWeightedDie(0.3)
+	game.WhiteDie = entities.NewWeightedDie(0.3)
+	game.EventDie = entities.NewWeightedDie(0.3)
 
 	// At this point, all data structures should be initialized
 	// Check if journal exists and start processing journal instead if yes
