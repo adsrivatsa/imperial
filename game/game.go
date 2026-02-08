@@ -184,9 +184,9 @@ func (game *Game) Initialize(id string, numPlayers uint16) (*Game, error) {
 	game.InitGraph()
 	game.InitWithGameMode()
 	game.DiceStats = &entities.DiceStats{}
-	game.RedDie = entities.NewWeightedDie(0.3)
-	game.WhiteDie = entities.NewWeightedDie(0.3)
-	game.EventDie = entities.NewWeightedDie(0.3)
+	game.RedDie = entities.NewWeightedDie()
+	game.WhiteDie = entities.NewWeightedDie()
+	game.EventDie = entities.NewWeightedDie()
 
 	// At this point, all data structures should be initialized
 	// Check if journal exists and start processing journal instead if yes

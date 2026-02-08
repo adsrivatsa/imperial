@@ -1,7 +1,6 @@
 package entities
 
 import (
-	"math"
 	"math/rand"
 )
 
@@ -21,36 +20,30 @@ type (
 	}
 
 	// WeightedDie tracks the number of times each face (1-6) has been rolled
-	// and uses exponential weighting so that more-rolled faces become less
-	// likely, pushing the distribution toward uniformity over time.
+	// and uses inverse-probability weighting so that more-rolled faces become
+	// less likely, pushing the distribution toward uniformity over time.
 	WeightedDie struct {
 		// Counts[i] is the number of times face i+1 has been rolled.
 		Counts [6]int `msgpack:"c"`
-		// Alpha controls the strength of the bias.
-		// Higher values make the correction more aggressive.
-		Alpha float64 `msgpack:"a"`
 	}
 )
 
-// NewWeightedDie creates a WeightedDie with the given alpha (decay rate).
-// A reasonable default alpha is 0.3 – strong enough to smooth the
-// distribution without making it completely deterministic.
-func NewWeightedDie(alpha float64) *WeightedDie {
+// NewWeightedDie creates a new WeightedDie with zeroed counts.
+func NewWeightedDie() *WeightedDie {
 	return &WeightedDie{
 		Counts: [6]int{},
-		Alpha:  alpha,
 	}
 }
 
-// Roll returns a value in [1, 6] chosen with exponential weighting.
-// Each face i has weight  w_i = exp(-alpha * count_i).
-// The probability of rolling face i is  w_i / sum(w_j).
+// Roll returns a value in [1, 6] chosen with inverse-probability weighting.
+// Each face i has weight  w_i = 1 / (1 + count_i).
+// Faces rolled more often receive proportionally less weight.
 func (d *WeightedDie) Roll() int {
 	var weights [6]float64
 	var total float64
 
 	for i := 0; i < 6; i++ {
-		weights[i] = math.Exp(-d.Alpha * float64(d.Counts[i]))
+		weights[i] = 1.0 / (1.0 + float64(d.Counts[i]))
 		total += weights[i]
 	}
 
