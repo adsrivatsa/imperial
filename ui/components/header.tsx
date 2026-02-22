@@ -145,26 +145,11 @@ const Header: FunctionComponent<{
                             <Link href="/lobby" className={textClass}>
                                 Lobby
                             </Link>
-                            <Link
-                                href="https://discord.com/invite/3TUqQX5acg"
-                                className={textClass}
-                            >
-                                Community
-                            </Link>
                             <Link href="/rules" className={textClass}>
                                 Rules
                             </Link>
-                            <Link
-                                href="https://blog.imperials.app"
-                                className={textClass}
-                            >
-                                Blog
-                            </Link>
                             <Link href="/maps" className={textClass}>
                                 Map Editor
-                            </Link>
-                            <Link href="/privacy" className={textClass}>
-                                Privacy
                             </Link>
                         </Popover.Group>
                         <div className="flex items-center md:ml-12">
@@ -220,25 +205,11 @@ const Header: FunctionComponent<{
                                 <Link href="/lobby">
                                     <a className={textClass}>Lobby</a>
                                 </Link>
-
-                                <a
-                                    href="https://discord.com/invite/3TUqQX5acg"
-                                    className={textClass}
-                                >
-                                    Community
-                                </a>
-
                                 <Link href="/rules">
                                     <a className={textClass}>Rules</a>
                                 </Link>
-                                <Link href="https://blog.imperials.app">
-                                    <a className={textClass}>Blog</a>
-                                </Link>
                                 <Link href="/maps">
                                     <a className={textClass}>Map Editor</a>
-                                </Link>
-                                <Link href="/privacy">
-                                    <a className={textClass}>Privacy</a>
                                 </Link>
                             </div>
                             <div className="mt-6 flex flex-row space-x-3">
