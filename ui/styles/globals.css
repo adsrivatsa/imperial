@@ -6,7 +6,11 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: "Dekko", cursive;
+    font-family:
+        "Open Sans",
+        ui-sans-serif,
+        system-ui,
+        sans-serif;
     height: 100vh;
     overflow: hidden;
 }

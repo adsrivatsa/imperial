@@ -139,8 +139,8 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
             )}
 
             <SessionProvider session={session}>
-                <div className="h-screen w-full bg-gradient-to-r from-sky-400 to-blue-800">
-                    <div className="absolute h-full w-full bg-[url('/assets/lobby-bg.jpg')] bg-cover opacity-100"></div>
+                <div className="h-screen w-full bg-[#1062B0]">
+                    <div className="absolute h-full w-full bg-[url('/assets/bg_overlay.png')] bg-cover opacity-100"></div>
                     <div className="absolute h-full w-full">
                         <Component {...pageProps} />
                     </div>
