@@ -23,8 +23,8 @@ func (g *Game) RollDice(p *entities.Player, givenRedRoll int, givenWhiteRoll int
 	g.ActionMutex.Lock()
 	defer g.ActionMutex.Unlock()
 
-	redRoll := g.RedDie.Roll()
-	whiteRoll := g.WhiteDie.Roll()
+	redRoll := rand.Intn(6) + 1
+	whiteRoll := rand.Intn(6) + 1
 
 	if givenRedRoll != 0 {
 		redRoll = givenRedRoll
@@ -40,7 +40,7 @@ func (g *Game) RollDice(p *entities.Player, givenRedRoll int, givenWhiteRoll int
 	}
 
 	if g.Mode == entities.CitiesAndKnights {
-		dieRollState.EventRoll = g.EventDie.Roll()
+		dieRollState.EventRoll = rand.Intn(6) + 1
 	}
 
 	g.BroadcastMessage(&entities.Message{
